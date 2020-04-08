@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Kejoko/keeg-site/issues"
   },
-  "homepage": "https://github.com/Kejoko/keeg-site#readme"
+  "homepage": "https://github.com/Kejoko/keeg-site#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
