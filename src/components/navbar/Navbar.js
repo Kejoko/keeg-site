@@ -26,8 +26,12 @@ const Navbar = (props) => {
                     <BurgerMenu openState={props.openState} toggleBurgerMenu={props.toggleNavbar}/>
                 </BurgerWrapper>
                 <NavLinks style={linkAnimation}>
-                    <a href={"/"}>About</a>
+                    <a href={"/"}>Keegan Kochis</a>
+                    <a href={"/about"}>About</a>
+                    <a href={"/photos"}>Photos</a>
                     <a href={"/blog"}>Blog</a>
+                    <a href={"/fun"}>Fun</a>
+                    <a href={"/contact"}>Contact</a>
                 </NavLinks>
                 <Brand/>
             </FlexContainer>

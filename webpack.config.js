@@ -34,7 +34,28 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about',
+            template: './src/about.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blog',
+            template: './src/blog.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact',
+            template: './src/contact.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'fun',
+            template: './src/fun.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'photos',
+            template: './src/photos.html'
         })
     ]
 };

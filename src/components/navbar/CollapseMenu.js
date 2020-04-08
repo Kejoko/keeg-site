@@ -13,8 +13,12 @@ const CollapseMenu = (props) => {
                 ).interpolate(openValue => `translate3d(0, ${openValue}px, 0`)
         }}>
             <NavLinks>
-                <li><a href={"/"}>About</a></li>
+                <li><a href={"/"}>Keegan Kochis</a></li>
+                <li><a href={"/about"}>About</a></li>
+                <li><a href={"/photos"}>Photos</a></li>
                 <li><a href={"/blog"}>Blog</a></li>
+                <li><a href={"/fun"}>Fun</a></li>
+                <li><a href={"/contact"}>Contact</a></li>
             </NavLinks>
         </CollapseWrapper>;
     }
