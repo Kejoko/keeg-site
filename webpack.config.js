@@ -1,18 +1,17 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
         main: './src/entries/index.js',
         about: './src/entries/about.js',
-        about: './src/entries/blog.js',
-        about: './src/entries/contact.js',
-        about: './src/entries/fun.js',
-        about: './src/entries/photos.js'
+        blog: './src/entries/blog.js',
+        contact: './src/entries/contact.js',
+        fun: './src/entries/fun.js',
+        photos: './src/entries/photos.js'
     },
     output: {
-        path: path.join(__dirname, '/dist'),
-        filename: '[name].kk_index_bundle.js'
+        path: __dirname + '/dist',
+        filename: 'dist/[name].kk_bundle.js'
     },
     module: {
         rules: [
