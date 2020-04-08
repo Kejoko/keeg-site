@@ -1,3 +1,6 @@
+#Ignore distribution files
+dist/
+
 #IntelliJ files to ignore
 .idea/
 *.iml
