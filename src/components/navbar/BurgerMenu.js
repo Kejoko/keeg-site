@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const BurgerMenu = (props) => {
-    return <Wrapper onClick={props.toggleNavbar}>
+    return <Wrapper onClick={props.toggleBurgerMenu}>
         <div className={props.openState ? "open" : ""}>
             <span>&nbsp;</span>
             <span>&nbsp;</span>

@@ -22,17 +22,21 @@ const Navbar = (props) => {
     return <>
         <NavBar style={barAnimation}>
             <FlexContainer>
-                <Brand/>
-                <NavLinks style={linkAnimation}>
-                    <a href={"/"}>About</a>
-                    <a href={"/blog"}>Blog</a>
-                </NavLinks>
                 <BurgerWrapper>
-                    <BurgerMenu openState={props.openState} toggleNavbar={props.toggleNavbar}/>
+                    <BurgerMenu openState={props.openState} toggleBurgerMenu={props.toggleNavbar}/>
                 </BurgerWrapper>
+                <NavLinks style={linkAnimation}>
+                    <a href={"/"}>Keegan Kochis</a>
+                    <a href={"/about"}>About</a>
+                    <a href={"/photos"}>Photos</a>
+                    <a href={"/blog"}>Blog</a>
+                    <a href={"/fun"}>Fun</a>
+                    <a href={"/contact"}>Contact</a>
+                </NavLinks>
+                <Brand/>
             </FlexContainer>
         </NavBar>
-        <CollapseMenu openState={props.openState} toggleNavbar={props.toggleNavbar}/>
+        <CollapseMenu openState={props.openState}/>
     </>;
 };
 
