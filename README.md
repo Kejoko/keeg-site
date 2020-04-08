@@ -3,6 +3,10 @@ This is a project I have undertaken in my free time to have a creative
 outlet and something to keep me busy.
 
 I intend on developing this website using reactjs.
+To run this app on a dev server run the command "npm start" in the project's
+root directory. To build this app for deployment run the command "npm run
+build" in the projects root directory. The resulting build will be in the
+dist directory.
 
 Here is a list of a few things planned for this website.
 
