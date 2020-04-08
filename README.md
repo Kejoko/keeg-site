@@ -21,3 +21,8 @@ able to display my photos that I have taken for all to see.
 ### Games
 This will be the most fun page of all. Here I will upload games and other
 miscellaneous things I have created for the user to interact with.
+
+### Blog
+Here I plan on posting small blog posts where I can update the users with
+what I have been up to and to what my recent thoughts are. I intend on
+posting book and movie reviews if I feel so inclined to do so.
