@@ -1,0 +1,9 @@
+#IntelliJ files to ignore
+.idea/*
+*.iml
+
+#Ignore npm stuff
+node_modules/
+client/node_modules/
+client/package-lock.json
+package-lock.json
