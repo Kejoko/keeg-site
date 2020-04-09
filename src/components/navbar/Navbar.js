@@ -26,12 +26,12 @@ const Navbar = (props) => {
                     <BurgerMenu openState={props.openState} toggleBurgerMenu={props.toggleNavbar}/>
                 </BurgerWrapper>
                 <NavLinks style={linkAnimation}>
-                    <a href={"/"}>Keegan Kochis</a>
-                    <a href={"/about"}>About</a>
-                    <a href={"/photos"}>Photos</a>
-                    <a href={"/blog"}>Blog</a>
-                    <a href={"/fun"}>Fun</a>
-                    <a href={"/contact"}>Contact</a>
+                    <NameLink href={"/"}>Keegan Kochis</NameLink>
+                    <PageLink href={"/about"}>About</PageLink>
+                    <PageLink href={"/photos"}>Photos</PageLink>
+                    <PageLink href={"/blog"}>Blog</PageLink>
+                    <PageLink href={"/fun"}>Fun</PageLink>
+                    <PageLink href={"/contact"}>Contact</PageLink>
                 </NavLinks>
                 <Brand/>
             </FlexContainer>
@@ -53,7 +53,7 @@ const NavBar = styled(animated.nav)`
 `;
 
 const FlexContainer = styled.div`
-  max-width: 120rem;
+  max-width: 162.5rem;
   display: flex;
   margin: auto;
   padding: 0 2rem;;
@@ -65,9 +65,32 @@ const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
+`;
 
-  & a {
+const NameLink = styled.a`
+    color: #ffffff;
+    font-family: 'Share';
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    margin: 0 1.5rem;
+    transition: all 300ms linear 0s;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2.2rem;
+
+    &:hover {
+      color: #fdcb6e;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+`;
+
+const PageLink = styled.a`
     color: #dfe6e9;
+    font-family: sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;
@@ -75,16 +98,16 @@ const NavLinks = styled(animated.ul)`
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
+    position: relative;
+    bottom: 2px;
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {
       display: none;
     }
-  }
 `;
 
 const BurgerWrapper = styled.div`

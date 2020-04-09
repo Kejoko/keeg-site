@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');;
+const HeaderStyle = createGlobalStyle`
 
   *,
   *::after,
@@ -18,8 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
   }
 `;
 
-export default GlobalStyle;
+export default HeaderStyle;
