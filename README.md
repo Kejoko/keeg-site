@@ -30,8 +30,3 @@ miscellaneous things I have created for the user to interact with.
 Here I plan on posting small blog posts where I can update the users with
 what I have been up to and to what my recent thoughts are. I intend on
 posting book and movie reviews if I feel so inclined to do so.
-
-
-## Used Material
-To be included as a link
-* [Compacta Bold Italic BT V2 font](https://www.onlinewebfonts.com/download/a2a1c6c11471387a7a0b2e199bfb2741)
