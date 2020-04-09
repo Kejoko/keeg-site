@@ -38,7 +38,7 @@ module.exports = {
             },
             // Font file loader
             {
-                test: /\.(woff|woff2)$/,
+                test: /\.(ttf|woff|woff2)$/,
                 use: {
                     loader: 'file-loader',
                     options: {

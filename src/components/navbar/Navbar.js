@@ -6,8 +6,6 @@ import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
-import FontStyles from "../../styles/fonts/fonts";
-
 const Navbar = (props) => {
     const barAnimation = useSpring({
         from: {transform: 'translate3d(0, -10rem, 0)'},
@@ -71,14 +69,15 @@ const NavLinks = styled(animated.ul)`
 
 const NameLink = styled.a`
     color: #ffffff;
+    font-family: 'Share';
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     border-bottom: 1px solid transparent;
     margin: 0 1.5rem;
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 
     &:hover {
       color: #fdcb6e;
@@ -92,6 +91,7 @@ const NameLink = styled.a`
 
 const PageLink = styled.a`
     color: #dfe6e9;
+    font-family: sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;
