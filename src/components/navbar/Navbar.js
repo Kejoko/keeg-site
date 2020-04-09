@@ -53,7 +53,7 @@ const NavBar = styled(animated.nav)`
 `;
 
 const FlexContainer = styled.div`
-  max-width: 120rem;
+  max-width: 162.5rem;
   display: flex;
   margin: auto;
   padding: 0 2rem;;
@@ -81,7 +81,6 @@ const NameLink = styled.a`
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {
@@ -99,10 +98,11 @@ const PageLink = styled.a`
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
+    position: relative;
+    bottom: 2px;
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {

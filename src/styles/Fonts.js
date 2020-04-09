@@ -17,16 +17,3 @@ const FontStyles = createGlobalStyle`
 `;
 
 export default FontStyles;
-
-/*
-
-    @font-face {
-        font-family: 'Compacta Bold Italic';
-        src: local('Compacta Bold Italic'), local('CompactaBoldItalic'),
-            url(${CompactaBoldItalicWoff2}) format('woff2'),
-            url(${CompactaBoldItalicWoff}) format('woff');
-        font-weight: 300;
-        font-style: normal;
-    }
-
- */
