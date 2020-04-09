@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from "./navbar/Navbar";
 
-import GlobalStyle from "../styles/Global";
+import HeaderStyle from "../styles/HeaderStyle";
 
 export default class Header extends Component {
     constructor(props) {
@@ -15,7 +15,7 @@ export default class Header extends Component {
     render() {
         return <>
             <Navbar openState={this.state.navbarOpen} toggleNavbar={() => this.setState({navbarOpen: !this.state.navbarOpen})}/>
-            <GlobalStyle/>
+            <HeaderStyle/>
          </>;
     }
 }

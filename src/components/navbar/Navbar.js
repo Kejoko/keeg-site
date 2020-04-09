@@ -6,6 +6,8 @@ import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
+import FontStyles from "../../styles/fonts/fonts";
+
 const Navbar = (props) => {
     const barAnimation = useSpring({
         from: {transform: 'translate3d(0, -10rem, 0)'},
@@ -26,12 +28,12 @@ const Navbar = (props) => {
                     <BurgerMenu openState={props.openState} toggleBurgerMenu={props.toggleNavbar}/>
                 </BurgerWrapper>
                 <NavLinks style={linkAnimation}>
-                    <a href={"/"}>Keegan Kochis</a>
-                    <a href={"/about"}>About</a>
-                    <a href={"/photos"}>Photos</a>
-                    <a href={"/blog"}>Blog</a>
-                    <a href={"/fun"}>Fun</a>
-                    <a href={"/contact"}>Contact</a>
+                    <NameLink href={"/"}>Keegan Kochis</NameLink>
+                    <PageLink href={"/about"}>About</PageLink>
+                    <PageLink href={"/photos"}>Photos</PageLink>
+                    <PageLink href={"/blog"}>Blog</PageLink>
+                    <PageLink href={"/fun"}>Fun</PageLink>
+                    <PageLink href={"/contact"}>Contact</PageLink>
                 </NavLinks>
                 <Brand/>
             </FlexContainer>
@@ -65,8 +67,30 @@ const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
+`;
 
-  & a {
+const NameLink = styled.a`
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    margin: 0 1.5rem;
+    transition: all 300ms linear 0s;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    &:hover {
+      color: #fdcb6e;
+      border-bottom: 1px solid #fdcb6e;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+`;
+
+const PageLink = styled.a`
     color: #dfe6e9;
     text-transform: uppercase;
     font-weight: 600;
@@ -84,7 +108,6 @@ const NavLinks = styled(animated.ul)`
     @media (max-width: 768px) {
       display: none;
     }
-  }
 `;
 
 const BurgerWrapper = styled.div`
