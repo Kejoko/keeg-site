@@ -13,12 +13,12 @@ const CollapseMenu = (props) => {
                 ).interpolate(openValue => `translate3d(0, ${openValue}px, 0`)
         }}>
             <NavLinks>
-                <li><a href={"/"}>Keegan Kochis</a></li>
-                <li><a href={"/about"}>About</a></li>
-                <li><a href={"/photos"}>Photos</a></li>
-                <li><a href={"/blog"}>Blog</a></li>
-                <li><a href={"/fun"}>Fun</a></li>
-                <li><a href={"/contact"}>Contact</a></li>
+                <li><NameLink href={"/"}>Keegan Kochis</NameLink></li>
+                <li><PageLink href={"/about"}>About</PageLink></li>
+                <li><PageLink href={"/photos"}>Photos</PageLink></li>
+                <li><PageLink href={"/blog"}>Blog</PageLink></li>
+                <li><PageLink href={"/contact"}>Contact</PageLink></li>
+                <li><PageLink href={"/fun"}>Fun</PageLink></li>
             </NavLinks>
         </CollapseWrapper>;
     }
@@ -36,6 +36,34 @@ const CollapseWrapper = styled(animated.div)`
   right: 0;
 `;
 
+const NameLink = styled.a`
+    font-size: 1.8rem;
+    font-family: 'Share';
+    line-height: 2;
+    color: #dfe6e9;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #fdcb6e;
+    }
+`;
+
+const PageLink = styled.a`
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    line-height: 2;
+    color: #dfe6e9;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #fdcb6e;
+    }
+`;
+
 const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
@@ -45,16 +73,5 @@ const NavLinks = styled.ul`
   }
 
   & a {
-    font-size: 1.4rem;
-    line-height: 2;
-    color: #dfe6e9;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
-    }
   }
 `;
