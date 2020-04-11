@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {useSpring, animated, config} from "react-spring";
 
 import Brand from "./Brand";
+import {NavbarDropdown, NavbarDropdownContent} from "./NavbarDropdown";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
@@ -30,10 +31,9 @@ const Navbar = (props) => {
                     <PageLink href={"/about"}>About</PageLink>
                     <PageLink href={"/photos"}>Photos</PageLink>
                     <PageLink href={"/blog"}>Blog</PageLink>
-                    <PageLink href={"/fun"}>Fun</PageLink>
                     <PageLink href={"/contact"}>Contact</PageLink>
                     <NavbarDropdown>
-                        <PageLink>Dropdown</PageLink>
+                        <PageLink href={"/fun"}>Fun</PageLink>
                         <NavbarDropdownContent>
                             <a>Content</a>
                         </NavbarDropdownContent>
@@ -115,28 +115,6 @@ const PageLink = styled.a`
       display: none;
     }
 `;
-
-const NavbarDropdown = styled.div`
-    position: absolute;
-    display: inline-block;
-
-    &:hover {
-        display: block;
-        >div {
-            display: block;
-        }
-    }
-`;
-
-const NavbarDropdownContent = styled.div`
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
-    padding: 12px 16px;
-    z-index: 1;
-  `;
 
 const BurgerWrapper = styled.div`
   margin: auto 0;
