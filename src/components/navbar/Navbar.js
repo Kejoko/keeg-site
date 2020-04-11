@@ -4,12 +4,12 @@ import {useSpring, animated, config} from "react-spring";
 
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
-import {NavbarDropdown, NavbarDropdownContent} from "./NavbarDropdown";
+import {dropdownOpen, NavbarDropdown, NavbarDropdownContent, NavbarDropdownTrigger} from "./NavbarDropdown";
 import DropdownIcon from "./DropdownIcon";
 import Brand from "./Brand";
 
 const Navbar = (props) => {
-    let funDropdownOpen = false;
+    let funDropdownOpen = false
 
     const barAnimation = useSpring({
         from: {transform: 'translate3d(0, -10rem, 0)'},
@@ -35,12 +35,9 @@ const Navbar = (props) => {
                     <PageLink href={"/photos"}>Photos</PageLink>
                     <PageLink href={"/blog"}>Blog</PageLink>
                     <PageLink href={"/contact"}>Contact</PageLink>
-                    <NavbarDropdown onmouseover={() => {
-                        funDropdownOpen = !funDropdownOpen;
-                        console.log("dropdown now open? " + funDropdownOpen);
-                    }}>
-                        <PageLink href={"/fun"}>Fun</PageLink>
-                        <DropdownIcon openState={funDropdownOpen}/>
+                    <NavbarDropdown onMouseOver={() => {funDropdownOpen = true; console.log(funDropdownOpen)}} onMouseOut={() => {funDropdownOpen = false; console.log(funDropdownOpen)}}>
+                        <NavbarDropdownTrigger href={"/fun"}>Fun</NavbarDropdownTrigger>
+                        <DropdownIcon navbarOpen={props.openState} openState={funDropdownOpen}/>
                         <NavbarDropdownContent>
                             <a>Content</a>
                         </NavbarDropdownContent>
@@ -72,6 +69,14 @@ const FlexContainer = styled.div`
   padding: 0 2rem;;
   justify-content: space-between;
   height: 5rem;
+`;
+
+const BurgerWrapper = styled.div`
+  margin: auto 0;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 `;
 
 const NavLinks = styled(animated.ul)`
@@ -121,12 +126,4 @@ const PageLink = styled.a`
     @media (max-width: 768px) {
       display: none;
     }
-`;
-
-const BurgerWrapper = styled.div`
-  margin: auto 0;
-
-  @media (min-width: 769px) {
-    display: none;
-  }
 `;

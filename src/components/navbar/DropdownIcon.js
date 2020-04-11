@@ -21,7 +21,6 @@ const Wrapper = styled.div`
   & span {
     display: block;
     position: absolute;
-    width: .9rem;
     height: .2rem;
     margin-bottom: 0rem;
     top: -11px;
@@ -30,27 +29,29 @@ const Wrapper = styled.div`
 
   .closed span:nth-child(1) {
     background: #dfe6e9;
-    left: 48px;
+    width: .8rem;
+    left: 30px;
     transform: rotate(45deg);
   }
   
   .closed span:nth-child(2) {
     background: #dfe6e9;
-    left: 54px;
+    width: .8rem;
+    left: 34px;
     transform: rotate(-45deg);
   }
   
   .open span:nth-child(1) {
     background: #fdcb6e;
     width: 1.1rem;
-    left: 51px;
+    left: 42px;
     transform: rotate(45deg);
   }
   
   .open span:nth-child(2) {
     background: #fdcb6e;
     width: 1.1rem;
-    left: 51px;
+    left: 42px;
     transform: rotate(-45deg);
   }
 `;
