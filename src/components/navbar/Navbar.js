@@ -35,9 +35,8 @@ const Navbar = (props) => {
                     <PageLink href={"/photos"}>Photos</PageLink>
                     <PageLink href={"/blog"}>Blog</PageLink>
                     <PageLink href={"/contact"}>Contact</PageLink>
-                    <NavbarDropdown onMouseOver={() => {funDropdownOpen = true; console.log(funDropdownOpen)}} onMouseOut={() => {funDropdownOpen = false; console.log(funDropdownOpen)}}>
+                    <NavbarDropdown>
                         <NavbarDropdownTrigger href={"/fun"}>Fun</NavbarDropdownTrigger>
-                        <DropdownIcon navbarOpen={props.openState} openState={funDropdownOpen}/>
                         <NavbarDropdownContent>
                             <a>Content</a>
                         </NavbarDropdownContent>

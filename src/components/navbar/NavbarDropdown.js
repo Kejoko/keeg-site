@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 
-export let dropdownOpen = false;
-
 export const NavbarDropdown = styled.div`
     position: absolute;
     margin: 0 1.2rem;
@@ -10,8 +8,6 @@ export const NavbarDropdown = styled.div`
     bottom: 2px;
 
     &:hover {
-        ${dropdownOpen} = !${dropdownOpen};
-        
         display: block;
         >div {
             display: block;
@@ -31,10 +27,10 @@ export const NavbarDropdownContent = styled.div`
 
 export const NavbarDropdownTrigger = styled.a`
     color: #dfe6e9;
+    border-bottom: 1px solid #dfe6e9;
     font-family: sans-serif;
     text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 1px solid transparent;
     margin: 0 0rem;
     transition: all 300ms linear 0s;
     text-decoration: none;
@@ -44,6 +40,7 @@ export const NavbarDropdownTrigger = styled.a`
 
     &:hover {
       color: #fdcb6e;
+      border-bottom: 1px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {
