@@ -19,11 +19,21 @@ export const NavbarDropdownContent = styled.div`
     display: none;
     position: absolute;
     background-color: #2d3436;
-    min-width: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
     padding: 12px 0px;
-    left: -15px;
+    left: -6px;
     z-index: 1;
+    
+    & a {
+        color: #dfe6e9;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 2rem;
+        bottom: 50px;
+        font-size: 1.4rem;
+        border: 1px solid transparent;
+    }
 `;
 
 export const NavbarDropdownTrigger = styled.a`
