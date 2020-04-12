@@ -4,13 +4,9 @@ import {useSpring, animated, config} from "react-spring";
 
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
-import {dropdownOpen, NavbarDropdown, NavbarDropdownContent, NavbarDropdownTrigger} from "./NavbarDropdown";
-import DropdownIcon from "./DropdownIcon";
 import Brand from "./Brand";
 
 const Navbar = (props) => {
-    let funDropdownOpen = false
-
     const barAnimation = useSpring({
         from: {transform: 'translate3d(0, -10rem, 0)'},
         transform: 'translate3d(0,0,0)'
@@ -34,13 +30,8 @@ const Navbar = (props) => {
                     <PageLink href={"/about"}>About</PageLink>
                     <PageLink href={"/photos"}>Photos</PageLink>
                     <PageLink href={"/blog"}>Blog</PageLink>
+                    <PageLink href={"/fun"}>Fun</PageLink>
                     <PageLink href={"/contact"}>Contact</PageLink>
-                    <NavbarDropdown>
-                        <NavbarDropdownTrigger href={"/fun"}>Fun</NavbarDropdownTrigger>
-                        <NavbarDropdownContent>
-                            <a>Content</a>
-                        </NavbarDropdownContent>
-                    </NavbarDropdown>
                 </NavLinks>
                 <Brand/>
             </FlexContainer>
