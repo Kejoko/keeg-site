@@ -18,16 +18,17 @@ export const NavbarDropdown = styled.div`
 export const NavbarDropdownContent = styled.div`
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #2d3436;
+    min-width: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
-    padding: 12px 16px;
+    padding: 12px 0px;
+    left: -15px;
     z-index: 1;
 `;
 
 export const NavbarDropdownTrigger = styled.a`
     color: #dfe6e9;
-    border-bottom: 1px solid #dfe6e9;
+    border-bottom: 1px solid transparent;
     font-family: sans-serif;
     text-transform: uppercase;
     font-weight: 600;
@@ -40,7 +41,6 @@ export const NavbarDropdownTrigger = styled.a`
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {

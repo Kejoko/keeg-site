@@ -38,7 +38,7 @@ const Navbar = (props) => {
                     <NavbarDropdown>
                         <NavbarDropdownTrigger href={"/fun"}>Fun</NavbarDropdownTrigger>
                         <NavbarDropdownContent>
-                            <a>Content</a>
+                            <PageLink>Content</PageLink>
                         </NavbarDropdownContent>
                     </NavbarDropdown>
                 </NavLinks>
